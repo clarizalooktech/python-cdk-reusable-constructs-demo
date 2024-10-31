@@ -3,7 +3,7 @@
 This is a repo that contains the libraries and cdk constructs(s3 bucket at the moment) to deploy a cloud insfrastructure resources using Python CDK. 
 
 * Individual cdk constructs 
-- Constructs are placed into sub folders within the repo while calling it within the stack to create a specific navigate product
+- Constructs are placed into sub folders within the repo while calling it within the stack to deploy resources
 
 
 #### Setup and Folder Structure 
