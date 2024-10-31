@@ -117,4 +117,4 @@ cdk deploy StackA
 ``` 
 cdk deploy StackA StackB 
 ```
-[![Create files and folders](https://dsdf.png)](https://youtu.be/QLmqbJVZ5jo)
+[![Create files and folders](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/image.jpg)](https://youtu.be/QLmqbJVZ5jo)
