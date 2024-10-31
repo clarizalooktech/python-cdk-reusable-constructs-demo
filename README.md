@@ -48,7 +48,8 @@ setup(
 touch cdk-constructs/__init__.py 
 touch cdk-constructs/s3/__init__.py 
 touch infrastructure/__init__.py 
-touch infrastructure/navigate_base/__init__.py 
+touch infrastructure/stackA/__init__.py 
+touch infrastructure/stackB/__init__.py 
 ```
 3. Set up the Python environment: 
 ``` 
