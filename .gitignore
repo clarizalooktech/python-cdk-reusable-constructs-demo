@@ -1,0 +1,24 @@
+# Virtual environment directories
+venv/
+env/
+.venv/
+.env/
+
+# Python cache and bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CDK output and build files
+cdk.out/
+node_modules/
+
+# Miscellaneous
+*.log
+*.sqlite3
+.DS_Store
+*.swp
+
+
+# Exclude egg-info directories
+*.egg-info/

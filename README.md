@@ -90,7 +90,8 @@ git clone
 
 2. Set up the Python environment: 
 ``` 
-python3 -m venv .venv source .venv/bin/activate 
+python3 -m venv .venv 
+source .venv/bin/activate 
 ``` 
 
 3. Install package in root folder 
