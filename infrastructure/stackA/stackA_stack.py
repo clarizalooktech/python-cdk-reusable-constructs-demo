@@ -1,14 +1,24 @@
-from aws_cdk import core as cdk
-from cdk_constructs.s3.s3_bucket import ReusableS3Bucket
+from aws_cdk import Stack, Duration, aws_s3 as s3
+from constructs import Construct
+from cdk_constructs.s3 import CustomS3Bucket
 
-class StackAStack(cdk.Stack):
-    def __init__(self, scope: cdk.Construct, id: str, **kwargs):
+class StackA(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
-        
-        reusable_bucket = ReusableS3Bucket(self, 
-            "Stack-A-Bucket", 
-            bucket_name="stacka-bucket", 
-            versioned=True
+
+        self.storage_bucket = CustomS3Bucket(
+            self, "StackABucket",
+            bucket_name="stack-a-storage-bucket",
+            encryption=True,
+            versioned=True,
+            lifecycle_rules=[
+                s3.LifecycleRule(
+                    transitions=[
+                        s3.Transition(
+                            storage_class=s3.StorageClass.INTELLIGENT_TIERING,
+                            transition_after=Duration.days(90)
+                        )
+                    ]
+                )
+            ]
         )
-        
-        # You can access the bucket using reusable_bucket.bucket

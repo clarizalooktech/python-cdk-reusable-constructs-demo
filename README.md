@@ -8,7 +8,8 @@ This is a repo that contains the libraries and cdk constructs(s3 bucket at the m
 
 #### Setup and Folder Structure 
 
-``` root/ 
+``` 
+    root/ 
     ├── setup.py 
     ├── app.py 
     ├── cdk-constructs/ 
