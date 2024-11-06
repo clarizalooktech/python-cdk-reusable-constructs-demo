@@ -53,7 +53,8 @@ touch infrastructure/stackB/__init__.py
 ```
 3. Set up the Python environment: 
 ``` 
-python3 -m venv .venv source .venv/bin/activate 
+python3 -m venv .venv 
+source .venv/Scripts/activate 
 ``` 
 
 4. Install package in root folder 
