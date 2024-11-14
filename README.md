@@ -8,7 +8,8 @@ This is a repo that contains the libraries and cdk constructs(s3 bucket at the m
 
 #### Setup and Folder Structure 
 
-``` root/ 
+``` 
+    root/ 
     ├── setup.py 
     ├── app.py 
     ├── cdk-constructs/ 
@@ -53,7 +54,8 @@ touch infrastructure/stackB/__init__.py
 ```
 3. Set up the Python environment: 
 ``` 
-python3 -m venv .venv source .venv/bin/activate 
+python3 -m venv .venv 
+source .venv/Scripts/activate 
 ``` 
 
 4. Install package in root folder 
@@ -90,7 +92,8 @@ git clone
 
 2. Set up the Python environment: 
 ``` 
-python3 -m venv .venv source .venv/bin/activate 
+python3 -m venv .venv 
+source .venv/bin/activate 
 ``` 
 
 3. Install package in root folder 
@@ -100,7 +103,7 @@ pip install -e .
 
 4. Synthesize in root folder 
 ``` 
-cdk synth 
+cdk synth StackA
 ``` 
 
 ##### Deployment 
@@ -117,3 +120,10 @@ cdk deploy StackA
 ``` 
 cdk deploy StackA StackB 
 ```
+#### Troubleshooting
+```
+python3 -m pip install aws-cdk-lib
+```
+#### References:
+1. Creating files and folders
+[![Create files and folders](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/image.jpg)](https://youtu.be/QLmqbJVZ5jo)
