@@ -14,7 +14,7 @@ class CustomS3Bucket(Construct):
 
         # Get optional configuration parameters
         bucket_name = kwargs.get('bucket_name', None)
-        encryption = kwargs.get('encryption', True)
+        encryption = kwargs.get('encryption', False)  
         versioned = kwargs.get('versioned', True)
         public_access = kwargs.get('public_access', False)
         lifecycle_rules = kwargs.get('lifecycle_rules', [])
@@ -28,11 +28,12 @@ class CustomS3Bucket(Construct):
                 description=f"KMS key for {id} bucket"
             )
         
-        # Create the S3 bucket
+        # Create the S3 bucket with encryption only if needed
+        encryption_type = s3.BucketEncryption.KMS if encryption else None
         self.bucket = s3.Bucket(
             self, f"{id}-bucket",
             bucket_name=bucket_name,
-            encryption=s3.BucketEncryption.KMS if encryption else s3.BucketEncryption.UNENCRYPTED,
+            encryption=encryption_type,
             encryption_key=self.kms_key if encryption else None,
             versioned=versioned,
             block_public_access=s3.BlockPublicAccess.BLOCK_ALL if not public_access else None,
