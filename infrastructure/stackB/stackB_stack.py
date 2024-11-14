@@ -1,6 +1,6 @@
 from aws_cdk import Stack, Duration, aws_s3 as s3
 from constructs import Construct
-from cdk_constructs.s3 import CustomS3Bucket
+from cdk_constructs.s3.s3_bucket import CustomS3Bucket
 
 class StackB(Stack):
     def __init__(self, scope: Construct, id: str, **kwargs) -> None:

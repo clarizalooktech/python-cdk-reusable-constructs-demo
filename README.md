@@ -103,7 +103,7 @@ pip install -e .
 
 4. Synthesize in root folder 
 ``` 
-cdk synth 
+cdk synth StackA
 ``` 
 
 ##### Deployment 
@@ -119,6 +119,10 @@ cdk deploy StackA
 * Deploy multiple specific stacks 
 ``` 
 cdk deploy StackA StackB 
+```
+#### Troubleshooting
+```
+python3 -m pip install aws-cdk-lib
 ```
 #### References:
 1. Creating files and folders
