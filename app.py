@@ -4,7 +4,7 @@ from infrastructure.stackB.stackB_stack import StackB
 
 app = cdk.App()
 
-StackA(app, "StackA")
-StackB(app, "StackB")
+stack_a = StackA(app, "StackA")
+stack_b = StackB(app, "StackB")
 
 app.synth()

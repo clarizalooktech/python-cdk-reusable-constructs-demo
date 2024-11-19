@@ -19,12 +19,9 @@ class StackB(Stack):
             ]
         )
 
-        alert_props = SnsTopicProps(
+        # Create SNS Topic without any subscribers
+        alert_topic_props = SnsTopicProps(
             topic_name="stack-b-alerts",
-            lambda_subscriptions=[
-                "arn:aws:lambda:us-east-1:123456789012:function:process-alerts"
-            ],
-            kms_key_id="arn:aws:kms:us-east-1:123456789012:key/1234abcd-12ab-34cd-56ef-1234567890ab",
             tags={
                 "Environment": "Development",
                 "Team": "TeamB",
@@ -35,5 +32,5 @@ class StackB(Stack):
         self.alert_topic = SnsTopic(
             self,
             "AlertTopic",
-            props=alert_props
+            props=alert_topic_props
         )

@@ -134,3 +134,10 @@ python3 -m pip install aws-cdk-lib
 3. Synthesize StackB
 [![Synthesize StackB](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/image3.jpg)](https://youtu.be/VYZPakPGTo4)
 
+4. Deploy all stacks
+[![Deploy stackA and stackB ](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/cdk_deploy_all_partA.jpg)]
+[![StackA has been deployed](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/cdk_deploy_all_partB.jpg)]
+[![StackB has been Deployed ](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/cdk_deploy_all_partC.jpg)]
+[![Cloudformation section in AWS Console](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/cdk_deploy_all_partD.jpg)]
+[![How it like in AWS Console](https://github.com/clarizalooktech/python-cdk-reusable-constructs-demo/blob/feature/reusable-construct-demo/assets/cdk_deploy_all_partE.jpg)]
+
