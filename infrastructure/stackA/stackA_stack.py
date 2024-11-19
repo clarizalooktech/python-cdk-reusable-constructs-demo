@@ -1,6 +1,7 @@
 from aws_cdk import Stack, Duration, aws_s3 as s3
 from constructs import Construct
 from cdk_constructs.s3.s3_bucket import CustomS3Bucket
+from cdk_constructs.sns.sns_topic import SnsTopic, SnsTopicProps
 
 class StackA(Stack):
     def __init__(self, scope: Construct, id: str, **kwargs) -> None:
@@ -21,4 +22,21 @@ class StackA(Stack):
                     ]
                 )
             ]
+        )
+
+        notification_props = SnsTopicProps(
+            topic_name="stack-a-notifications",
+            email_subscriptions=["myemail@example.com"],
+            retention_days=14,
+            tags={
+                "Environment": "Development",
+                "Team": "TeamA",
+                "CostCenter": "123456678"
+            }
+        )
+
+        self.notification_topic = SnsTopic(
+            self,
+            "NotificationTopic",
+            props=notification_props
         )

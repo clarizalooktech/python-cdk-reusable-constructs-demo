@@ -30,6 +30,7 @@ class CustomS3Bucket(Construct):
         
         # Create the S3 bucket with encryption only if needed
         encryption_type = s3.BucketEncryption.KMS if encryption else None
+        
         self.bucket = s3.Bucket(
             self, f"{id}-bucket",
             bucket_name=bucket_name,
@@ -37,7 +38,7 @@ class CustomS3Bucket(Construct):
             encryption_key=self.kms_key if encryption else None,
             versioned=versioned,
             block_public_access=s3.BlockPublicAccess.BLOCK_ALL if not public_access else None,
-            removal_policy=RemovalPolicy.RETAIN,
+            removal_policy=RemovalPolicy.DESTROY, #for testing purpose only
             lifecycle_rules=lifecycle_rules
         )
 
